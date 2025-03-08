@@ -1,0 +1,170 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 15px 20px;
+    font-size: 20px;
+}
+
+/* Icon Keranjang */
+.cart-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    position: relative;
+}
+
+#cart-count {
+    background: red;
+    color: white;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 5px 8px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+/* Produk */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.product p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product button:hover {
+    background: #0056b3;
+}
+
+/* Keranjang */
+#cart {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    border-radius: 5px;
+}
+
+#cart.show {
+    display: block;
+}
+
+#cart h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#cart ul {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 5px;
+}
+
+#cart ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+#cart ul li button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#cart ul li button:hover {
+    background: darkred;
+}
+
+/* Tombol Bayar */
+#cart button {
+    width: 100%;
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#cart button:hover {
+    background: darkgreen;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+    }
+}
